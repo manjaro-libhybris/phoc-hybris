@@ -16,7 +16,7 @@ sha256sums=('520eff0adccb8b560d7938d12ed389bbe93213cae975fb2881a40c3f513169c1')
 
 build() {
     rm -rf build
-    arch-meson phoc-v${pkgver} build -Dtests=false
+    arch-meson phoc-v${pkgver} build -Dtests=false -Dembed-wlroots=disabled
     ninja -C build
 }
 
