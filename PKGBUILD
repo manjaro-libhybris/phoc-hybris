@@ -2,8 +2,8 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.1.9
-pkgrel=2
+pkgver=0.4.0
+pkgrel=1
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
@@ -12,7 +12,7 @@ depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
          'xcb-util-errors' 'xcb-util-wm' 'wlroots')
 makedepends=('meson')
 source=("https://source.puri.sm/Librem5/phoc/-/archive/v${pkgver}/phoc-v${pkgver}.tar.gz")
-sha256sums=('520eff0adccb8b560d7938d12ed389bbe93213cae975fb2881a40c3f513169c1')
+sha256sums=('44bb94ef95378c9982113dc4b363a6277af131d949f54fcd210cc0945feec74f')
 
 build() {
     rm -rf build
