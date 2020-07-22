@@ -2,8 +2,8 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.4.0
-pkgrel=2
+pkgver=0.4.1
+pkgrel=1
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
@@ -14,7 +14,7 @@ makedepends=('meson')
 source=("https://source.puri.sm/Librem5/phoc/-/archive/v${pkgver}/phoc-v${pkgver}.tar.gz"
         0001-seat-Don-t-notify-on-key-release.patch
         0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch)
-sha256sums=('44bb94ef95378c9982113dc4b363a6277af131d949f54fcd210cc0945feec74f'
+sha256sums=('420a4e8b1b15a99475fda1221249a7ca7c1f77c09fee114530f2a4612fde84fc'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
             '6ee0b93d5e2353fef9d5f06b8c7897239de0891daef4c5a02e19f254ab8d256e')
 
