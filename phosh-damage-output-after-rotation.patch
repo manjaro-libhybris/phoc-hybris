@@ -1,0 +1,25 @@
+From fcdc23945d1d78c1dfbeb7e85d859566a55beb7a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Guido=20G=C3=BCnther?= <agx@sigxcpu.org>
+Date: Wed, 5 Aug 2020 16:35:13 +0200
+Subject: [PATCH] phosh: Damage output after rotation
+
+Otherwise the update will be delayed until a surface changes.
+---
+ src/phosh.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/phosh.c b/src/phosh.c
+index a1f7468..379a971 100644
+--- a/src/phosh.c
++++ b/src/phosh.c
+@@ -73,6 +73,7 @@ phosh_rotate_display (struct wl_client   *client,
+   }
+ 
+   wlr_output_set_transform (phosh->panel->output, transform);
++  output_damage_whole(phosh->panel->output->data);
+ }
+ 
+ 
+-- 
+2.26.2
+
