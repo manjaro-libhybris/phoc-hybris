@@ -3,7 +3,7 @@
 
 pkgname=phoc
 pkgver=0.4.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
