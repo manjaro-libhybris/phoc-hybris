@@ -19,7 +19,8 @@ source=("https://source.puri.sm/Librem5/phoc/-/archive/v${pkgver}/phoc-v${pkgver
 sha256sums=('30d496ee348c619bdf11c62a93ea599a5e000a77788e124b897c6731f1ae7c92'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
             '6ee0b93d5e2353fef9d5f06b8c7897239de0891daef4c5a02e19f254ab8d256e'
-            '3f6dd0eda3d1ee3d686a5abb51c1fa42bab8565545670e496a3b8bbb45cad976')
+            '3f6dd0eda3d1ee3d686a5abb51c1fa42bab8565545670e496a3b8bbb45cad976'
+            'c3e5c4c7164908762452c95d86ad6fc54ed927a7f6373f3c5a60df4d4cb96797')
 
 prepare() {
   cd phoc-v${pkgver}
