@@ -4,6 +4,7 @@
 pkgname=phoc
 pkgver=0.4.3
 pkgrel=4
+_commit=f153f896d0341756c2064199512bd41d68d2e8a5
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
@@ -11,16 +12,17 @@ arch=('i686' 'x86_64' 'armv6h' 'armv7h' 'aarch64')
 depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
          'xcb-util-errors' 'xcb-util-wm' 'wlroots')
 makedepends=('meson')
-source=("https://source.puri.sm/Librem5/phoc/-/archive/v${pkgver}/phoc-v${pkgver}.tar.gz"
+source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
         0001-seat-Don-t-notify-on-key-release.patch
-        0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch
-        cde7028.patch
-        37744a7.patch)
-sha256sums=('30d496ee348c619bdf11c62a93ea599a5e000a77788e124b897c6731f1ae7c92'
+        0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch)
+sha256sums=('SKIP'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
-            '6ee0b93d5e2353fef9d5f06b8c7897239de0891daef4c5a02e19f254ab8d256e'
-            '3f6dd0eda3d1ee3d686a5abb51c1fa42bab8565545670e496a3b8bbb45cad976'
-            'c3e5c4c7164908762452c95d86ad6fc54ed927a7f6373f3c5a60df4d4cb96797')
+            '6ee0b93d5e2353fef9d5f06b8c7897239de0891daef4c5a02e19f254ab8d256e')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/^v//;s/-/+/g'
+}
 
 prepare() {
   cd phoc-v${pkgver}
