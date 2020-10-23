@@ -25,7 +25,7 @@ pkgver() {
 }
 
 prepare() {
-  cd phoc-v${pkgver}
+  cd $pkgname
   local src
   for src in "${source[@]}"; do
     src="${src%%::*}"
@@ -38,11 +38,11 @@ prepare() {
 
 build() {
   rm -rf build
-  arch-meson phoc-v${pkgver} build -Dtests=false -Dembed-wlroots=disabled
+  arch-meson $pkgname build -Dtests=false -Dembed-wlroots=disabled
   ninja -C build
 }
 
 package() {
   DESTDIR="${pkgdir}" ninja -C build install
-  install -Dm755 phoc-v${pkgver}/helpers/scale-to-fit ${pkgdir}/usr/bin
+  install -Dm755 $pkgname/helpers/scale-to-fit ${pkgdir}/usr/bin
 }
