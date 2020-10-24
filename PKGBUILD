@@ -2,8 +2,8 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.4.3
-pkgrel=4
+pkgver=0.4.3+8+gf153f89
+pkgrel=2
 _commit=f153f896d0341756c2064199512bd41d68d2e8a5
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
@@ -14,10 +14,12 @@ depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
 makedepends=('meson')
 source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
         0001-seat-Don-t-notify-on-key-release.patch
-        0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch)
+        0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch
+        MR206.patch)
 sha256sums=('SKIP'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
-            '6ee0b93d5e2353fef9d5f06b8c7897239de0891daef4c5a02e19f254ab8d256e')
+            '6ee0b93d5e2353fef9d5f06b8c7897239de0891daef4c5a02e19f254ab8d256e'
+            'f3177940d95519a93f3e973ddf6ad82180fce0ab8ff0f4d215f2075501fa7cff')
 
 pkgver() {
   cd $pkgname
