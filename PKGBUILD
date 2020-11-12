@@ -2,15 +2,15 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.4.4
-pkgrel=1
+pkgver=0.4.4+4+ga5bdd63
+pkgrel=2
 _commit=a5bdd630bbb67a680aa5308a32c2e69aef0a08e5
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h' 'aarch64')
 depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
-         'xcb-util-errors' 'xcb-util-wm' 'wlroots')
+         'xcb-util-errors' 'xcb-util-wm')
 makedepends=('meson')
 source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
         0001-seat-Don-t-notify-on-key-release.patch
@@ -28,6 +28,10 @@ pkgver() {
 
 prepare() {
   cd $pkgname
+
+  git submodule init
+  git submodule update
+
   local src
   for src in "${source[@]}"; do
     src="${src%%::*}"
