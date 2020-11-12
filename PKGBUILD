@@ -30,6 +30,7 @@ prepare() {
   cd $pkgname
 
   git submodule init
+  git config submodule.wlroots.url $srcdir/$pkgname/submodule/wlroots
   git submodule update
 
   local src
