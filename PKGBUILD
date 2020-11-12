@@ -31,8 +31,6 @@ prepare() {
 
   # update the submodules
   git submodule update --init --recursive
-  git submodule foreach git checkout master
-  git submodule foreach git pull --rebase origin master
 
   local src
   for src in "${source[@]}"; do
@@ -46,7 +44,7 @@ prepare() {
 
 build() {
   rm -rf build
-  arch-meson $pkgname build -Dtests=false -Dembed-wlroots=disabled
+  arch-meson $pkgname build -Dtests=false
   ninja -C build
 }
 
