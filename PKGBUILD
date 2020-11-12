@@ -29,11 +29,10 @@ pkgver() {
 prepare() {
   cd $pkgname
 
-  git submodule init
-  git config submodule.wlroots.url $srcdir/$pkgname/subprojects/wlroots
-  git submodule update
-
-  ls $srcdir/$pkgname/subprojects/wlroots
+  # update the submodules
+  git submodule update --init --recursive
+  git submodule foreach git checkout master
+  git submodule foreach git pull --rebase origin master
 
   local src
   for src in "${source[@]}"; do
