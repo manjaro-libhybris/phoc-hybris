@@ -33,6 +33,8 @@ prepare() {
   git config submodule.wlroots.url $srcdir/$pkgname/subprojects/wlroots
   git submodule update
 
+  ls $srcdir/$pkgname/subprojects/wlroots
+
   local src
   for src in "${source[@]}"; do
     src="${src%%::*}"
