@@ -17,13 +17,11 @@ conflicts=('wlroots')
 source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
         0001-seat-Don-t-notify-on-key-release.patch
         0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch
-        0003-output-make-sure-rotations-are-always-clockwise.patch
-        MR212.patch)
+        0003-output-make-sure-rotations-are-always-clockwise.patch)
 sha256sums=('SKIP'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
             '9c4ff0cc5d189b69fe0b02b1e6419b2071dc8f8002dc533095ea1b378c671464'
-            '43b1793a607d8643707f34103c771554a1a540a448bafd0ffad45e51d72194d9'
-            '7556ad228323283087986fec01278b77ef9a89f4e76d238d6a048e1279cc4b1b')
+            '43b1793a607d8643707f34103c771554a1a540a448bafd0ffad45e51d72194d9')
 
 pkgver() {
   cd $pkgname
