@@ -1,6 +1,6 @@
 build-package:
   tags:
-    - strit
+    - bigbuilds
   script:
     - sudo pacman -Syy && makepkg -scr --noconfirm
   artifacts:
