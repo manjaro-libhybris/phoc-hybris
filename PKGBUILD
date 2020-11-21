@@ -20,7 +20,7 @@ source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
         0003-output-make-sure-rotations-are-always-clockwise.patch)
 sha256sums=('SKIP'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
-            '9c4ff0cc5d189b69fe0b02b1e6419b2071dc8f8002dc533095ea1b378c671464'
+            '6dce25b600e9b3217a5de2c384c87eeba4b022b460a2c071e57d2830e7545727'
             '43b1793a607d8643707f34103c771554a1a540a448bafd0ffad45e51d72194d9')
 
 pkgver() {
