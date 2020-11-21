@@ -4,7 +4,7 @@
 pkgname=phoc
 pkgver=0.5.0
 pkgrel=1
-_commit=3d66b07efa15caddebf7f918d2c69168641fe6a3
+_commit=1ef1613811849161437cbe73d8980ac4929301e9
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
