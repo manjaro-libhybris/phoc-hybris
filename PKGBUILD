@@ -11,7 +11,7 @@ license=("GPL3")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h' 'aarch64')
 depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
          'xcb-util-errors' 'xcb-util-wm')
-makedepends=('meson')
+makedepends=('meson' 'git')
 provides=('wlroots')
 conflicts=('wlroots')
 source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
