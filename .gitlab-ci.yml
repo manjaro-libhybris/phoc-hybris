@@ -27,7 +27,7 @@ build-package:
     # build pkg via chrootbuild
     - export PKG=${PWD##*/}
     - cd ..
-    - sudo chrootbuild -cp $PKG
+    - sudo chrootbuild -b arm-unstable -cp $PKG
     - mv -v ./*.pkg.tar.* $PKG
     #- sudo pacman -Syy && makepkg -scr --noconfirm
   artifacts:
