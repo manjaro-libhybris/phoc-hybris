@@ -23,7 +23,7 @@ sha256sums=('SKIP'
 
 pkgver() {
   cd $pkgname
-  git describe --tags | sed 's/^v//;s/-/+/g'
+  git describe --tags | sed 's/^v//;s/-/+/g;s|pureos/||g'
 }
 
 prepare() {
