@@ -22,8 +22,8 @@ source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
 sha256sums=('SKIP'
             'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
             '6dce25b600e9b3217a5de2c384c87eeba4b022b460a2c071e57d2830e7545727'
-            'c474329edd4e45d6b342609ab8ca3878e47e14345ca47e9e1354633107e0c6b2'
-            'ec02d932549adc94645dcb07ae586909257afa48b28ece95e38dbbed92614a31')
+            'SKIP'
+            'SKIP')
 
 pkgver() {
   cd $pkgname
