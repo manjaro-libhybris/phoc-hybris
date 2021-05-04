@@ -62,7 +62,7 @@ prepare() {
     src="${src##*/}"
     [[ $src = *.diff ]] || continue
     echo "Applying patch $src..."
-    patch -Np1 < "../$src"
+    patch -Np1 < "../../$src"
   done  
 }
 
