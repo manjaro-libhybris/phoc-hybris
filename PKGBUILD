@@ -69,8 +69,8 @@ prepare() {
 build() {
   rm -rf build
   arch-meson $pkgname build -Dtests=false \
-          -Dsubproject:logind-provider=systemd \
-          -Dsubproject:libseat=disabled
+          -Dwlroots:logind-provider=systemd \
+          -Dwlroots:libseat=disabled
   ninja -C build
 }
 
