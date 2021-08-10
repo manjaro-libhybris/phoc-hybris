@@ -4,7 +4,7 @@
 pkgname=phoc
 pkgver=0.8.0
 pkgrel=1
-_commit=527689df1300277af2cdfc872474c8322e38f690
+_commit=73f12d3f3f98d68185139fa9f4e65b125bfcc58b
 _wlroots=0.12.0
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
@@ -15,7 +15,7 @@ depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
 makedepends=('meson' 'git')
 provides=('wlroots')
 conflicts=('wlroots')
-source=("git+https://source.puri.sm/Librem5/${pkgname}.git#commit=${_commit}"
+source=("git+https://gitlab.gnome.org/World/Phosh/${pkgname}.git#commit=${_commit}"
         "wlroots-$_wlroots.tar.gz::https://github.com/swaywm/wlroots/archive/$_wlroots.tar.gz"
         "https://github.com/swaywm/wlroots/releases/download/$_wlroots/wlroots-$_wlroots.tar.gz.sig"
         0001-seat-Don-t-notify-on-key-release.patch
