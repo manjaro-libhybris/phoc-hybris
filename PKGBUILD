@@ -19,14 +19,12 @@ source=("git+https://gitlab.gnome.org/World/Phosh/${pkgname}.git#commit=${_commi
         "wlroots-$_wlroots.tar.gz::https://github.com/swaywm/wlroots/archive/$_wlroots.tar.gz"
         "https://github.com/swaywm/wlroots/releases/download/$_wlroots/wlroots-$_wlroots.tar.gz.sig"
         0001-seat-Don-t-notify-on-key-release.patch
-        0002-seat-inhibit-touch-events-when-in-power-save-mode-or.patch
         xcursor-fix-false-positive-stringop-truncation.diff
         Revert-layer-shell-error-on-0-dimension-without-anchors.diff)
 sha256sums=('SKIP'
             'c9e9f4f6d2f526d0b2886daf3ec37e64831773059aa669fb98a88522a1626bdb'
             'SKIP'
-            'fbabb0c9f31c2520cf72a252e1cc4a4da7091b830ed5e439901f007205a59cd8'
-            '6dce25b600e9b3217a5de2c384c87eeba4b022b460a2c071e57d2830e7545727'
+            '7600bedbed3057c427965668a9bcda433fab57b35726f9ecb07a9328d3dd4238'
             'a6779e7fa2beee02f9949f6c8bd5c279c6d3f9bbc4103230a627f18a5f74761e'
             '544ff25b0a7184ac73cd38ed3c34369721a83ae926016ddb941c4ca21abddac9')
 validpgpkeys=(
