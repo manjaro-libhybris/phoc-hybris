@@ -4,8 +4,8 @@
 pkgname=phoc
 pkgver=0.8.0
 pkgrel=1
-_commit=03b7142b91dcd4f23745cad802c11a23d673ee56
-_wlroots=0.12.0
+_commit=61324853a9d427303d69713427a98c2305cbe126
+#_wlroots=0.12.0
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
@@ -16,15 +16,14 @@ makedepends=('meson' 'git')
 provides=('wlroots')
 conflicts=('wlroots')
 source=("git+https://gitlab.gnome.org/World/Phosh/${pkgname}.git#commit=${_commit}"
-        "wlroots-$_wlroots.tar.gz::https://github.com/swaywm/wlroots/archive/$_wlroots.tar.gz"
+        #"wlroots-$_wlroots.tar.gz::https://github.com/swaywm/wlroots/archive/$_wlroots.tar.gz"
         0001-seat-Don-t-notify-on-key-release.patch
         xcursor-fix-false-positive-stringop-truncation.diff
         Revert-layer-shell-error-on-0-dimension-without-anchors.diff)
 sha256sums=('SKIP'
-            'c9e9f4f6d2f526d0b2886daf3ec37e64831773059aa669fb98a88522a1626bdb'
             '7600bedbed3057c427965668a9bcda433fab57b35726f9ecb07a9328d3dd4238'
             'a6779e7fa2beee02f9949f6c8bd5c279c6d3f9bbc4103230a627f18a5f74761e'
-            '544ff25b0a7184ac73cd38ed3c34369721a83ae926016ddb941c4ca21abddac9')         
+            '544ff25b0a7184ac73cd38ed3c34369721a83ae926016ddb941c4ca21abddac9')
 
 pkgver() {
   cd $pkgname
@@ -34,8 +33,10 @@ pkgver() {
 prepare() {
   cd $pkgname
   
-  rm -r subprojects/wlroots
-  mv ../wlroots-$_wlroots subprojects/wlroots
+  #rm -r subprojects/wlroots
+  #mv ../wlroots-$_wlroots subprojects/wlroots
+  
+  git submodule init
 
   local src
   for src in "${source[@]}"; do
