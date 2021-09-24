@@ -11,7 +11,7 @@ url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h' 'aarch64')
 depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
-         'xcb-util-errors' 'xcb-util-wm')
+         'xcb-util-errors' 'xcb-util-wm' 'wayland-protocols')
 makedepends=('meson' 'git')
 provides=('wlroots')
 conflicts=('wlroots')
