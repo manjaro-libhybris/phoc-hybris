@@ -18,12 +18,10 @@ conflicts=('wlroots')
 source=("git+https://gitlab.gnome.org/World/Phosh/${pkgname}.git#commit=${_commit}"
         #"wlroots-$_wlroots.tar.gz::https://github.com/swaywm/wlroots/archive/$_wlroots.tar.gz"
         0001-seat-Don-t-notify-on-key-release.patch
-        xcursor-fix-false-positive-stringop-truncation.diff
-        Revert-layer-shell-error-on-0-dimension-without-anchors.diff)
+        xcursor-fix-false-positive-stringop-truncation.diff)
 sha256sums=('SKIP'
             '7600bedbed3057c427965668a9bcda433fab57b35726f9ecb07a9328d3dd4238'
-            'a6779e7fa2beee02f9949f6c8bd5c279c6d3f9bbc4103230a627f18a5f74761e'
-            '544ff25b0a7184ac73cd38ed3c34369721a83ae926016ddb941c4ca21abddac9')
+            'a6779e7fa2beee02f9949f6c8bd5c279c6d3f9bbc4103230a627f18a5f74761e')
 
 pkgver() {
   cd $pkgname
@@ -37,6 +35,7 @@ prepare() {
   #mv ../wlroots-$_wlroots subprojects/wlroots
   
   git submodule init
+  git submodule update
 
   local src
   for src in "${source[@]}"; do
