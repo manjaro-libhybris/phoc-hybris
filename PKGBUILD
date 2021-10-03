@@ -2,8 +2,8 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.8.0
-pkgrel=1
+pkgver=0.8.0+62+g4613b16
+pkgrel=2
 _commit=4613b166aa5cfcb621627d1de1a017c5df8433f7
 #_wlroots=0.12.0
 pkgdesc="Wlroots based Phone compositor"
@@ -18,9 +18,11 @@ conflicts=('wlroots')
 source=("git+https://gitlab.gnome.org/World/Phosh/${pkgname}.git#commit=${_commit}"
         #"wlroots-$_wlroots.tar.gz::https://github.com/swaywm/wlroots/archive/$_wlroots.tar.gz"
         0001-seat-Don-t-notify-on-key-release.patch
+        https://gitlab.gnome.org/World/Phosh/phoc/-/merge_requests/271.patch
         xcursor-fix-false-positive-stringop-truncation.diff)
 sha256sums=('SKIP'
             '7600bedbed3057c427965668a9bcda433fab57b35726f9ecb07a9328d3dd4238'
+            'e31cabf0e7a2a0e05b668b3a605b41db936f7372a28307d43b1d6d4211afd688'
             'a6779e7fa2beee02f9949f6c8bd5c279c6d3f9bbc4103230a627f18a5f74761e')
 
 pkgver() {
