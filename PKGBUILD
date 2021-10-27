@@ -2,9 +2,9 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.8.0+95+g9dd5d11
+pkgver=0.9.0+3+g3cd31d3
 pkgrel=1
-_commit=9dd5d11e2ec400e9a59b43b1d4d2ffc42c52c70d
+_commit=3cd31d3761fe4c34260e509684fe4d7a09662a08
 #_wlroots=0.12.0
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
