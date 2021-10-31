@@ -2,9 +2,9 @@
 # Contributor: Philip Goto <philip.goto@gmail.com>
 
 pkgname=phoc
-pkgver=0.9.0+7+g6afd2cb
+pkgver=0.9.0+19+gcc74528
 pkgrel=1
-_commit=6afd2cb50c05a19b91efc89c8b1dd37604ccb1b6
+_commit=cc74528e0b0a2e985c4592413433daffad38bcae
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
