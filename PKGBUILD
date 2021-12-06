@@ -6,7 +6,7 @@ provides=('phoc')
 conflicts=('phoc')
 _pkgbase=phoc
 pkgver=645.81f76ea
-pkgrel=2
+pkgrel=3
 _commit=81f76ea1a7673e33b5f604e46a80fbe74b87bac6
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
@@ -26,17 +26,12 @@ pkgver() {
 
 prepare() {
   cd "${srcdir}/${_pkgbase}"
-  
-  #rm -r subprojects/wlroots
-  #mv ../wlroots-$_wlroots subprojects/wlroots
-  
-  git submodule init
-  git submodule update
 }
 
 build() {
   rm -rf build
-  meson "${srcdir}/${_pkgbase}" build \
+  arch-meson "${srcdir}/${_pkgbase}" build \
+          -Dtests=false \
           -Dembed-wlroots=disabled
   ninja -C build
 }
