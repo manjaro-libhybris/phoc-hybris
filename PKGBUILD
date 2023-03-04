@@ -5,9 +5,9 @@ pkgname=phoc-hybris
 provides=('phoc')
 conflicts=('phoc')
 _pkgbase=phoc
-pkgver=0.24.0+1+droidian0
+pkgver=0.25.0+droidian0
 pkgrel=1
-_commit=90897e2ef88cdf52b58983241ef79900b4ec0569
+_commit=e44840039531d17a146e62d462fc26d075c4460d
 pkgdesc="Wlroots based Phone compositor"
 url="https://source.puri.sm/Librem5/phoc"
 license=("GPL3")
@@ -15,7 +15,7 @@ arch=('i686' 'x86_64' 'armv6h' 'armv7h' 'aarch64')
 depends=('gobject-introspection' 'gnome-desktop' 'libinput' 'mutter'
          'xcb-util-errors' 'xcb-util-wm' 'wayland-protocols' 'wlroots-hybris' 'ffmpeg')
 makedepends=('meson' 'git')
-provides=('phoc=0.24.0')
+provides=('phoc=0.25.0')
 source=("git+https://github.com/droidian/phoc.git#commit=${_commit}")
 sha256sums=('SKIP')
 
